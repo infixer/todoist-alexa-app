@@ -1,0 +1,4 @@
+TODOIST_API_TOKEN=
+ALLOWED_ALEXA_USER_ID=
+# Optional: restrict requests to one physical Echo (simulator uses a different ID).
+ALLOWED_ALEXA_DEVICE_ID=

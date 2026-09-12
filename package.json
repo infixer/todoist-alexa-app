@@ -1,0 +1,54 @@
+{
+  "name": "todoist-alexa-app",
+  "version": "1.0.0",
+  "description": "個人用Alexaカスタムスキル やること相棒 — Cloudflare Workers + Todoist",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "dev": "wrangler dev",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "build": "wrangler deploy --dry-run --outdir dist",
+    "check": "npm run format:check && npm run typecheck && npm test && npm run test:workers && npm run build",
+    "deploy": "wrangler deploy",
+    "test:workers": "vitest run --config vitest.workers.config.ts",
+    "trust:update": "npx --yes --package=node@24 node scripts/update-trust-store.mjs",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/infixer/todoist-alexa-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/infixer/todoist-alexa-app/issues"
+  },
+  "homepage": "https://github.com/infixer/todoist-alexa-app#readme",
+  "dependencies": {
+    "node-forge": "^1.4.0",
+    "uuid": "^14.0.2",
+    "zod": "^4.6.2"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "^0.22.0",
+    "@cloudflare/workers-types": "^5.20260911.1",
+    "@types/node": "^22.20.2",
+    "@types/node-forge": "^1.3.14",
+    "prettier": "^3.9.6",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.0",
+    "wrangler": "^4.131.1"
+  },
+  "private": true,
+  "overrides": {
+    "sharp": "^0.35.4"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  }
+}

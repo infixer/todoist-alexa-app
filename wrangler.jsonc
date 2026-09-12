@@ -1,0 +1,13 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "todoist-alexa-app",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-08-15",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  "vars": {
+    "ALEXA_SKILL_ID": "",
+    "ENABLE_APL": "false",
+  },
+  "observability": { "enabled": false },
+}
