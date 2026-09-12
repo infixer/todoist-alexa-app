@@ -1,0 +1,48 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "やること相棒",
+      "intents": [
+        {
+          "name": "AddTaskIntent",
+          "slots": [{ "name": "taskContent", "type": "AMAZON.SearchQuery" }],
+          "samples": [
+            "{taskContent}を追加",
+            "{taskContent}を追加して",
+            "タスクに{taskContent}を追加して"
+          ]
+        },
+        {
+          "name": "ListTodayIntent",
+          "samples": ["今日の一覧", "今日のタスク", "今日やることを教えて", "一覧を更新して"]
+        },
+        {
+          "name": "CompleteTaskIntent",
+          "slots": [{ "name": "taskNumber", "type": "AMAZON.NUMBER" }],
+          "samples": [
+            "{taskNumber}番を完了",
+            "{taskNumber}番を完了して",
+            "{taskNumber}番が終わった"
+          ]
+        },
+        {
+          "name": "PostponeTaskIntent",
+          "slots": [{ "name": "taskNumber", "type": "AMAZON.NUMBER" }],
+          "samples": [
+            "{taskNumber}番を明日に延期",
+            "{taskNumber}番を明日にして",
+            "{taskNumber}番を明日に延期して"
+          ]
+        },
+        { "name": "AMAZON.YesIntent", "samples": [] },
+        { "name": "AMAZON.NoIntent", "samples": [] },
+        { "name": "AMAZON.HelpIntent", "samples": [] },
+        { "name": "AMAZON.StopIntent", "samples": ["終了"] },
+        { "name": "AMAZON.CancelIntent", "samples": [] },
+        { "name": "AMAZON.FallbackIntent", "samples": [] },
+        { "name": "AMAZON.NextIntent", "samples": ["続き", "次のページ"] }
+      ],
+      "types": []
+    }
+  }
+}
